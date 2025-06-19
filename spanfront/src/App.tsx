@@ -6,6 +6,7 @@ function App() {
     <main className="h-screen w-screen">
       <div className="p-20">
         <Counter />
+
         <Interactive />
       </div>
     </main>
