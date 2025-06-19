@@ -1,14 +1,10 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-ROOT=$(git rev-parse --show-toplevel)
+# No longer use `husky.sh` bootstrap
 
 echo "🔍 Running frontend lint..."
-cd "$ROOT/spanfront" || exit 1
-yarn lint || exit 1
+cd spanfront && npm run lint
 
 echo "🧪 Running backend tests..."
-cd "$ROOT/corenode" || exit 1
-yarn || exit 1
+cd ../corenode && npm test
 
 echo "✅ Pre-commit checks passed."
