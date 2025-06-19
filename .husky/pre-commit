@@ -1,0 +1,14 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+ROOT=$(git rev-parse --show-toplevel)
+
+echo "🔍 Running frontend lint..."
+cd "$ROOT/spanfront" || exit 1
+yarn lint || exit 1
+
+echo "🧪 Running backend tests..."
+cd "$ROOT/corenode" || exit 1
+yarn || exit 1
+
+echo "✅ Pre-commit checks passed."
