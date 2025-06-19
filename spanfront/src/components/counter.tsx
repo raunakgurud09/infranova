@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 export const Counter = () => {
   const [count, setCount] = useState<number>(0);
@@ -6,7 +6,7 @@ export const Counter = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCount((count) => count * 2);
-    }, 1000);
+    }, 3000);
 
     return () => {
       clearInterval(interval);
