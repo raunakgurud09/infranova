@@ -4,7 +4,7 @@ import { Interactive } from "./components/Interactive";
 function App() {
   return (
     <main className="h-screen w-screen">
-      <div className="p-20">
+      <div className="p-40">
         <Counter />
         <Interactive />
       </div>
