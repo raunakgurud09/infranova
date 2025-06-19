@@ -5,12 +5,13 @@ export const Counter = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCount((count) => count + 1);
+      setCount((count) => count * 2);
     }, 1000);
 
     return () => {
       clearInterval(interval);
     };
   }, []);
+
   return <div>{count}</div>;
 };
