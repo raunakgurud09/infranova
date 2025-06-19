@@ -4,3 +4,38 @@ dist/
 .env
 *.log
 *.lock
+
+# Ignore build outputs
+dist
+build
+.out
+.next
+
+# Node modules
+node_modules
+
+# Coverage directory
+coverage
+
+# Lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Generated files
+*.min.js
+*.bundle.js
+
+# Static assets
+public/*
+!.prettierrc
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+
+# Environment files
+.env
+.env.*.local
